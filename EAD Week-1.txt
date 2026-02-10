@@ -1,0 +1,19 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+  < meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"
+  <tittle> format details</tittle>
+  </head>
+  <body>
+        <div class="format details">
+        <ul>
+                <h2> Fromat details </h2>
+                <li> name: srilekha </li>
+                <li> sec:IT -2 </li>
+           </ul>
+      </body>
+   </html>             
+                 
+    
+
