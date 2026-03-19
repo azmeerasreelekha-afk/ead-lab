@@ -1,0 +1,45 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+
+h2 {
+    text-align: center;
+}
+
+
+form {
+    width: 400px;
+    margin: 30px auto;
+}
+
+
+fieldset {
+    border: 2px solid #4CAF50;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 18px;
+    color: #4CAF50;
+    padding: 0 10px;
+}
+
+
+form div {
+    margin-bottom: 12px;
+   
+}
+
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
