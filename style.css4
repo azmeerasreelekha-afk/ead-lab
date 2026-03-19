@@ -1,0 +1,57 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 70%;
+    margin: 40px auto;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+h1 {
+    color: darkblue;
+    font-size: 32px;
+}
+
+
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+
+ol {
+    display: inline-block;
+    text-align: left;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+ol li {
+    margin: 8px 0;
+}
+
+img {
+    margin-top: 20px;
+    border: 3px solid green;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px gray;
+}
+
+
+a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
