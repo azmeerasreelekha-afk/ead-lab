@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Processor</title>
+
+    <style>
+        body{
+            font-family:Arial;
+            text-align:center;
+            margin-top:80px;
+        }
+
+        input{
+            width:300px;
+            padding:10px;
+        }
+
+        button{
+            padding:10px 20px;
+            margin:5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>String Processor Tool</h2>
+
+<input type="text" id="text" placeholder="Enter Text">
+
+<br><br>
+
+<button onclick="convertUpper()">Upper Case</button>
+
+<button onclick="reverseString()">Reverse</button>
+
+<button onclick="countChars()">Count Characters</button>
+
+<h3 id="output"></h3>
+
+<script>
+
+const upper = function(str){
+    return str.toUpperCase();
+}
+
+
+const reverse = (str) => {
+    return str.split("").reverse().join("");
+}
+
+const count = (str) => str.length;
+
+function convertUpper(){
+
+    let text = document.getElementById("text").value;
+
+    document.getElementById("output").innerHTML =
+    upper(text);
+}
+
+function reverseString(){
+
+    let text = document.getElementById("text").value;
+
+    document.getElementById("output").innerHTML =
+    reverse(text);
+}
+
+function countChars(){
+
+    let text = document.getElementById("text").value;
+
+    document.getElementById("output").innerHTML =
+    "Character Count = " + count(text);
+}
+
+</script>
+
+</body>
+</html>
