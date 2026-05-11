@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Payroll</title>
+
+    <style>
+        body{
+            font-family:Arial;
+            text-align:center;
+            margin-top:80px;
+        }
+
+        input{
+            padding:10px;
+            margin:5px;
+        }
+
+        button{
+            padding:10px 20px;
+        }
+
+        table{
+            margin:auto;
+            margin-top:20px;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            border:1px solid black;
+            padding:10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Employee Payroll System</h2>
+
+<input type="text" id="name" placeholder="Employee Name">
+
+<input type="number" id="salary" placeholder="Basic Salary">
+
+<button onclick="generatePayroll()">Generate</button>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Basic Salary</th>
+        <th>Bonus</th>
+        <th>Total Salary</th>
+    </tr>
+
+    <tbody id="tableBody"></tbody>
+</table>
+
+<script>
+
+
+function Employee(name, salary, bonus = 2000){
+
+    this.name = name;
+    this.salary = salary;
+    this.bonus = bonus;
+
+    this.totalSalary = function(){
+
+        return this.salary + this.bonus;
+    }
+}
+
+function generatePayroll(){
+
+    let empName =
+    document.getElementById("name").value;
+
+    let empSalary =
+    parseInt(document.getElementById("salary").value);
+
+    let emp = new Employee(empName, empSalary);
+
+    let row = `
+    <tr>
+        <td>${emp.name}</td>
+        <td>${emp.salary}</td>
+        <td>${emp.bonus}</td>
+        <td>${emp.totalSalary()}</td>
+    </tr>
+    `;
+
+    document.getElementById("tableBody").innerHTML += row;
+}
+
+</script>
+
+</body>
+</html>
