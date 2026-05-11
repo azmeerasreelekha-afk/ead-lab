@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Login</title>
+    <style>
+        body{
+            font-family: Arial;
+            background:#f2f2f2;
+            text-align:center;
+            margin-top:100px;
+        }
+        .box{
+            background:white;
+            width:300px;
+            margin:auto;
+            padding:20px;
+            border-radius:10px;
+        }
+        input{
+            width:90%;
+            padding:10px;
+            margin:10px;
+        }
+        button{
+            padding:10px 20px;
+            background:blue;
+            color:white;
+            border:none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Login Page</h2>
+
+    <input type="text" id="username" placeholder="Enter Username"><br>
+
+    <input type="password" id="password" placeholder="Enter Password"><br>
+
+    <button onclick="checkLogin()">Login</button>
+
+    <p id="result"></p>
+</div>
+
+<script>
+
+function loginTracker() {
+
+    let attempts = 0;
+
+    return function(username, password) {
+
+        attempts++;
+
+        if(username === "admin" && password === "1234") {
+            return "Login Successful in " + attempts + " attempt(s)";
+        }
+        else {
+            return "Invalid Login! Attempt Count: " + attempts;
+        }
+    }
+}
+
+const validate = loginTracker();
+
+function checkLogin() {
+
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    if(user === "" || pass === "") {
+        document.getElementById("result").innerHTML =
+        "Please fill all fields";
+        return;
+    }
+
+    document.getElementById("result").innerHTML =
+    validate(user, pass);
+}
+
+</script>
+
+</body>
+</html>
